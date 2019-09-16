@@ -1,0 +1,104 @@
+﻿Conservice Web Team Coding Assessment
+
+After meeting with the HR department you have received a request to build a web app that will give HR the ability to manage team members within the company.
+
+The department requires the ability to do the following items:
+
+·  Ability to view all team members on a single page.
+
+·  Add a new team member as they are hired, delete a team member record when needed, and mark a team member as terminated.
+
+·  Edit a team member’s record, i.e. address, position, department, etc.
+
+·  An activity tracker that will record when a team member’s permissions change, when a team member’s manager changes, and when a team member’s position changes.
+
+·  A reporting page to view recruiting, and retention efforts including:
+
+o Weekly hire numbers
+
+o Terminated numbers for the current year
+
+·  In an effort to maintain the site’s security have a page to view all permission assignments for all team members.
+
+
+Project Specific Views:
+
+·         Page 1: All Team Members
+
+·         Page 2: Individual Team Member (Add, Modify, or Delete)
+
+·         Page 3: Recruiting and Retention Statistics
+
+·         Page 4: Permission Assignments Page
+
+Default Views:
+
+·         Page A: Login
+
+·         Page B: Create Account
+
+·         Page C: Error
+
+·         Page D: Permission Denied
+
+
+HR has asked that the following items be included in the team member record:
+
+·  Name
+
+·  Address
+
+·  Email Address
+
+·  Preferred Contact Phone Number
+
+·  Position
+
+·  Department
+
+·  Start Date
+
+·  End Date
+
+·  Employment Status
+
+·  Shift
+
+·  Manager
+
+·  Team Member Photo
+
+·  Favorite Color
+
+ 
+
+Minimum Viable Product:
+
+·  Create an ASP.NET MVC web application
+
+·  No authentication required
+
+·  Use Bootstrap for UI
+
+·  Data should be stored in a SQL Database
+
+·  A page to view all team members in the database
+
+·  Ability sort and filter employees on the all team page
+
+·  Ability to search for team members by name on the all team page
+
+·  The ability to add, delete, and edit team member records
+
+·  A reporting page for displaying recruiting and retention metrics
+
+·  A page to view the activity log of modifications made to a team member record
+
+ 
+
+
+ 
+
+The sky's the limit with the project to show off your skills. Project completion isn’t the ultimate goal 
+of this assessment but an exercise to better understand your ability to show us your skills and ability to 
+adapt to project requirements. Remember to submit your project by the deadline referenced above, regardless of project completion.
