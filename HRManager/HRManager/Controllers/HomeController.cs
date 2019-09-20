@@ -17,14 +17,17 @@ namespace HRManager.Controllers
 
         public IActionResult About()
         {
-            ViewData["Message"] = "Your application description page.";
+            ViewData["Message"] = "All about our Company:" +
+                "We love our Employees!";
+            ViewData["Learning"] = ConsoleColor.Blue;
+            ViewData["Time"] = DateTime.Now.ToString();
 
             return View();
         }
 
         public IActionResult Contact()
         {
-            ViewData["Message"] = "Your contact page.";
+            ViewData["Message"] = "Let's connect, collaborate, confer, and convene!";
 
             return View();
         }
