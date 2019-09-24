@@ -19,7 +19,6 @@ namespace HRManager.Controllers
         {
             ViewData["Message"] = "All about our Company:" +
                 "We love our Employees!";
-            ViewData["Learning"] = ConsoleColor.Blue;
             ViewData["Time"] = DateTime.Now.ToString();
 
             return View();
