@@ -1,9 +1,9 @@
-﻿
+﻿@model HRManager.Models.Employee
 @{
     ViewData["Title"] = "AllEmployees";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-
+<h2>You found me!!</h2>
 <h2>@Model.FirstName</h2>
 <h2>@Model.LastName</h2>
 <h2>@Model.Address</h2>
@@ -15,6 +15,6 @@
 <h2>@Model.EndDate</h2>
 <h2>@Model.EmploymentStatus</h2>
 <h2>@Model.Shift</h2>
-<h2>@Model.Manager</h2>
+<h2>@Model.Manager.FirstName @Model.Manager.LastName</h2>
 <h2>@Model.FavoriteColor</h2>
 

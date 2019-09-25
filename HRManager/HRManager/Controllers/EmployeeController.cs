@@ -12,6 +12,7 @@ namespace HRManager.Controllers
     {
         public IActionResult AllEmployees()
         {
+
             Employee employee = new Employee()
             {
                 FirstName = "Ryan",
@@ -21,16 +22,20 @@ namespace HRManager.Controllers
                 PhoneNumber = "801-900-5981",
                 Position = "Software Developer",
                 // How do I instantiate a Dictionary variable?
-                //Department = <1, "Software Development"
-                // DateTime StartDate { get; set; }
-                // DateTime EndDate { get; set; }
-                // Dictionary<int, string> EmploymentStatus { get; set; }
-                // Dictionary<int, string> Shift { get; set; }
-                // Employee Manager { get; set; }
+                Department = new HRManager.Models.Constants.Department(),
+                StartDate = new DateTime(2017, 04, 03),
+                EndDate = new DateTime(),
+                EmploymentStatus = "Owner",
+                Shift = "Day",
+                   Manager = new Employee()
+                   {
+                       FirstName = "Heavenly",
+                       LastName = "Father",
+                   },
                 ////Team Member Photo (above my skill level at present)
                 FavoriteColor = "I like colors"
             };
-            return View();
+            return View(employee);
         }
     }
 }
