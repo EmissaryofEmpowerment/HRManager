@@ -1,0 +1,13 @@
+﻿@model Statistics
+@{
+    ViewData["Title"] = "Statistics";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h2>Retention Statistics for Our Company:</h2>
+<h4>Current as of @DateTime.Now</h4>
+<h3>Number of Team Members who have been with the company for 5 years or more: 
+   @Model.VeteranTeamMembers</h3>
+<h3>Number of Team Members hired this week: @Model.WeeklyHireNumbers</h3>
+<h3>Number of Team Members who have been terminated during the year
+    @DateTime.Now.Year: @Model.YearlyTerminations</h3>
+

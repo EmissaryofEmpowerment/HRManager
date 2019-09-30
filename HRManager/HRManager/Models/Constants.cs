@@ -11,12 +11,12 @@ namespace HRManager.Models
         {
             Human_Resources, Production, Accounts_Payable,
             Accounts_Receivable, Distribution, Administrative,
-            Sales, Service, Information_Technology
+            Sales, Service, Information_Technology, Records
         }
 
         public enum Employment_Status
         {
-Owner, Hired, Suspended, Terminated
+Owner, Hired, Suspended, Terminated, Partner
 }
         public enum Shift
         {

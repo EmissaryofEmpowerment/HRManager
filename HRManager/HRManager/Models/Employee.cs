@@ -16,10 +16,12 @@ namespace HRManager.Models
         public HRManager.Models.Constants.Department Department { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
-        public string EmploymentStatus { get; set; }
-        public string Shift { get; set; }
+        public HRManager.Models.Constants.Employment_Status EmploymentStatus { get; set; }
+        public HRManager.Models.Constants.Shift Shift { get; set; }
         public Employee Manager { get; set; }
         //Team Member Photo (above my skill level at present)
         public string FavoriteColor { get; set; }
+        public HRManager.Models.Constants.PermissionLevel PermissionLevel { get; set; }
     }
 }
+

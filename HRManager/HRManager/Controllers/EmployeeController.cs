@@ -22,18 +22,19 @@ namespace HRManager.Controllers
                 PhoneNumber = "801-900-5981",
                 Position = "Software Developer",
                 // How do I instantiate a Dictionary variable?
-                Department = new HRManager.Models.Constants.Department(),
+                Department = HRManager.Models.Constants.Department.Information_Technology,
                 StartDate = new DateTime(2017, 04, 03),
                 EndDate = new DateTime(),
-                EmploymentStatus = "Owner",
-                Shift = "Day",
+                EmploymentStatus = HRManager.Models.Constants.Employment_Status.Owner,
+                Shift = HRManager.Models.Constants.Shift.Day,
                    Manager = new Employee()
                    {
                        FirstName = "Heavenly",
                        LastName = "Father",
                    },
                 ////Team Member Photo (above my skill level at present)
-                FavoriteColor = "I like colors"
+                FavoriteColor = "I like colors",
+                PermissionLevel = HRManager.Models.Constants.PermissionLevel.Low
             };
             return View(employee);
         }
