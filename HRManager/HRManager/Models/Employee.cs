@@ -22,6 +22,8 @@ namespace HRManager.Models
         //Team Member Photo (above my skill level at present)
         public string FavoriteColor { get; set; }
         public HRManager.Models.Constants.PermissionLevel PermissionLevel { get; set; }
+        public string UserName { get; set; }
+        public string PassWord { get; set; }
     }
 }
 

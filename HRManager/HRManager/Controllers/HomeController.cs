@@ -36,5 +36,13 @@ namespace HRManager.Controllers
             return View(new ErrorViewModel { RequestId = Activity.Current?
                 .Id ?? HttpContext.TraceIdentifier });
         }
+
+        public IActionResult Login()
+        {
+            Employee employee = new Employee();
+            employee.UserName = "VidaliaPearlArmstrong";
+            employee.PassWord = "computergirl";
+            return View(employee);
+        }
     }
 }
