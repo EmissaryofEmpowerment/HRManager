@@ -5,16 +5,13 @@
 }
 
 <h2>Login</h2>
-<form id="getUserInfo">
+<form action="/Home/LoggingIn" type="get" id="getUserInfo">
     <dl class="form-group">
         <dt class="input-label">
             <label class="form-label h5" for="user[login]">Username</label>
         </dt>
         <dd>
             <input type="text" id="user[login]" class="form-control h5" />
-        </dd>
-        <dd>
-            <input type="submit" value="Submit" />
         </dd>
     </dl>
     <dl class="form-group">
@@ -34,6 +31,8 @@
     let getUserInfo = document.getElementById("getUserInfo");
     let GetUserName = document.getElementById("user[login]");
     let GetUserPassword = document.getElementById("user[password]");
+    alert("getUserInfo: " + getUserInfo + " GetUserName: " + GetUserName + " GetUserPassword " + GetUserPassword);
+    alert("UserName (controller): " + @Model.UserName + " UserPassword (controller): ");
     let CheckUserName = function () {
         if (GetUserName === @Model.UserName && GetUserPassword === @Model.PassWord) {
             alert("Welcome" + getUserInfo);
@@ -41,6 +40,7 @@
         else {
             alert("Invalid UserName or Password");
         }}
-    getUserInfo.addEventListener("submit",CheckUserName, false);
+    getUserInfo.addEventListener("submit", CheckUserName, false);
+    alert("UserName: " + @Model.UserName + " Password: " + @Model.PassWord);
 </script>
 

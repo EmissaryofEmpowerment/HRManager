@@ -37,12 +37,13 @@ namespace HRManager.Controllers
                 .Id ?? HttpContext.TraceIdentifier });
         }
 
-        public IActionResult Login()
+        public IActionResult Login(int id)
         {
             Employee employee = new Employee();
             employee.UserName = "VidaliaPearlArmstrong";
             employee.PassWord = "computergirl";
-            return View(employee);
+            HttpPostAttribute UserInput = new HttpPostAttribute();
+            return Content("id= " + id);
         }
     }
 }

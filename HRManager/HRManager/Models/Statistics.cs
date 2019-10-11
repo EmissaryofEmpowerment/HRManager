@@ -9,10 +9,11 @@ namespace HRManager.Models
     {
         public int WeeklyHireNumbers { get; set; }
         public int YearlyTerminations { get; set; }
-        public int VeteranTeamMembers { get; set; }
+public int VeteranTeamMembers { get; set; }
         public DateTime HireFireDate;
         public DateTime today = DateTime.Now;
 
+  
         public Statistics(DateTime _HireFireDate)
         {
             HireFireDate = _HireFireDate;

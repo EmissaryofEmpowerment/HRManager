@@ -11,7 +11,8 @@ namespace HRManager.Models
         {
             Human_Resources, Production, Accounts_Payable,
             Accounts_Receivable, Distribution, Administrative,
-            Sales, Service, Information_Technology, Records
+            Sales, Service, Information_Technology, Records,
+            Secret_Agent
         }
 
         public enum Employment_Status

@@ -1,20 +1,63 @@
-﻿@model HRManager.Models.Employee
+﻿@model HRManager.Models.ViewModels.List_Employee_ViewModel
 @{
     ViewData["Title"] = "AllEmployees";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-<h2>You found me!!</h2>
-<h2>@Model.FirstName</h2>
-<h2>@Model.LastName</h2>
-<h2>@Model.Address</h2>
-<h2>@Model.Email</h2>
-<h2>@Model.PhoneNumber</h2>
-<h2>@Model.Position</h2>
-<h2>@Model.Department</h2>
-<h2>@Model.StartDate</h2>
-<h2>@Model.EndDate</h2>
-<h2>@Model.EmploymentStatus</h2>
-<h2>@Model.Shift</h2>
-<h2>@Model.Manager.FirstName @Model.Manager.LastName</h2>
-<h2>@Model.FavoriteColor</h2>
+<form>
+    <fieldset>All Employees</fieldset>
+    <table>
+        <thead>
+            <tr>
+                <th>Employee ID</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Address</th>
+            <th>Email</th>
+            <th>Phone Number</th>
+            <th>Position</th>
+            <th>Department</th>
+            <th>Start Date</th>
+            <th>End Date</th>
+            <th>Employment Status</th>
+            <th>Shift</th>
+            <th>Direct Supervisor</th>
+            <th>Favorite Color</th>
+            <th>Permission Level</th>
+                <th>User Name</th>
+                <th>Password</th>
+            </tr>
+        </thead>
+        <tbody>
+                @for (int i = 0; i < Model.Employee_List.Count; i++)
+                {
+            <tr>
+                
+                <td>   @Model.Employee_List[i].FirstName</td>
+                <td>@Model.Employee_List[i].LastName</td>
+                <td>@Model.Employee_List[i].Address</td>
+                <td>@Model.Employee_List[i].Email</td>
+                <td>@Model.Employee_List[i].PhoneNumber</td>
+                <td>@Model.Employee_List[i].Position</td>
+                <td>@Model.Employee_List[i].Department</td>
+                <td>@Model.Employee_List[i].StartDate</td>
+                <td>@Model.Employee_List[i].EndDate</td>
+                <td>@Model.Employee_List[i].EmploymentStatus</td>
+                <td>@Model.Employee_List[i].Shift</td>
+                <td>@Model.Employee_List[i].Manager</td>
+                <td>@Model.Employee_List[i].FavoriteColor</td>
+                <td>@Model.Employee_List[i].PermissionLevel</td>
+                @*I need a way to make sure that the only
+                    users that can see the Employee's UserName
+                    and Password is that individual Employee
+                    plus people who have a high enough permisson level*@
+                <td>@Model.Employee_List[i].UserName</td>
+                <td>@Model.Employee_List[i].PassWord</td>
+            </tr>
+                }
+        </tbody>
+        @*Here I want code that enumerates through all the instances
+            Employee. Maybe this will have to wait until
+            I have the database set up and running properly*@
+    </table>
+    </form>
 
