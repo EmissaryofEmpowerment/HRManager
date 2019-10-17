@@ -20,7 +20,7 @@
     <nav class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse" co>
                     <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
@@ -34,8 +34,14 @@
                     <li><a asp-area="" asp-controller="Home" asp-action="About">About</a></li>
                     <li><a asp-area="" asp-controller="Home" asp-action="Contact">Contact</a></li>
                     <li><a asp-area="" asp-controller="Home" asp-action="Login">Login</a></li>
-                    <li><a asp-area="" asp-controller="Employee" asp-action="AllEmployees">AllEmployees</a></li>
-                    <li><a asp-area="" asp-controller="Statistics" asp-action="Statistics">Retention/Recruitment Statistics</a></li>
+                    <li><a aria-describedby="sr-next" aria-expanded="false"
+                    data-href="/benefits-grants-loans" href="#">Employees</a>>
+                    <ul>
+                        <li><a asp-area="" asp-controller="Employee" asp-action="AllEmployees">AllEmployees</a></li>
+                        <li><a asp-area="" asp-controller="Employee" asp-action="IndividualTeamMember">Individual Team Member</a></li>
+                    </ul>
+                    </li>
+                        <li><a asp-area="" asp-controller="Statistics" asp-action="Statistics">Retention/Recruitment Statistics</a></li>
 
                 </ul>
             </div>

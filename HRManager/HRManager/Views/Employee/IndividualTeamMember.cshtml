@@ -1,0 +1,65 @@
+﻿@model HRManager.Models.Employee
+@{
+    ViewData["Title"] = "IndividualTeamMember";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>IndividualTeamMember</h1>
+<form>
+    <fieldset>@Model.FirstName @Model.LastName</fieldset>
+    <table>
+        <tr>
+        <thead>
+            <tr>
+                <th>Employee ID</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Address</th>
+                <th>Email</th>
+                <th>Phone Number</th>
+                <th>Position</th>
+                <th>Department</th>
+                <th>Start Date</th>
+                <th>End Date</th>
+                <th>Employment Status</th>
+                <th>Shift</th>
+                <th>Direct Supervisor</th>
+                <th>Favorite Color</th>
+                <th>Permission Level</th>
+                <th>User Name</th>
+                <th>Password</th>
+            </tr>
+        </thead>
+        <tbody>
+                <tr>
+
+                    <td>   @Model.FirstName</td>
+                    <td>@Model.LastName</td>
+                    <td>@Model.Address</td>
+                    <td>@Model.Email</td>
+                    <td>@Model.PhoneNumber</td>
+                    <td>@Model.Position</td>
+                    <td>@Model.Department</td>
+                    <td>@Model.StartDate</td>
+                    <td>@Model.EndDate</td>
+                    <td>@Model.EmploymentStatus</td>
+                    <td>@Model.Shift</td>
+                    <td>@Model.Manager</td>
+                    <td>@Model.FavoriteColor</td>
+                    <td>@Model.PermissionLevel</td>
+                    @*I need a way to make sure that the only
+                    users that can see the Employee's UserName
+                    and Password is that individual Employee
+                    plus people who have a high enough permisson level*@
+                    <td>@Model.UserName</td>
+                    <td>@Model.PassWord</td>
+                </tr>
+            <tr>
+                <td>
+                    <a asp-area="" asp-controller="Employee" asp-action="CreateRecord">Add New Team Member</a><button>Edit This Record</button><button>Delete This Record</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</form>
+
