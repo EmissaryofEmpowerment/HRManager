@@ -5,21 +5,21 @@
 }
 
 <h2>Login</h2>
-<form action="/Home/LoggingIn" type="get" id="getUserInfo">
+<form type="get" id="GetUserInfo">
     <dl class="form-group">
         <dt class="input-label">
-            <label class="form-label h5" for="user[login]">Username</label>
+            <label class="form-label h5" for="userLogin">Username</label>
         </dt>
         <dd>
-            <input type="text" id="user[login]" class="form-control h5" />
+            <input type="text" id="userLogin" class="form-control h5" />
         </dd>
     </dl>
     <dl class="form-group">
         <dt class="input-label">
-            <label class="form-label h5" for=" user[password]">Password</label>
+            <label class="form-label h5" for=" userPassword">Password</label>
         </dt>
         <dd>
-            <input type="text" id="user[password]" class="form-control h5" />
+            <input type="text" id="userPassword" class="form-control h5" />
         </dd>
         <dd>
             <input type="submit" value="Submit" />
@@ -28,19 +28,30 @@
 
 </form>
 <script>
-    let getUserInfo = document.getElementById("getUserInfo");
-    let GetUserName = document.getElementById("user[login]");
-    let GetUserPassword = document.getElementById("user[password]");
-    alert("getUserInfo: " + getUserInfo + " GetUserName: " + GetUserName + " GetUserPassword " + GetUserPassword);
-    alert("UserName (controller): " + @Model.UserName + " UserPassword (controller): ");
-    let CheckUserName = function () {
-        if (GetUserName === @Model.UserName && GetUserPassword === @Model.PassWord) {
-            alert("Welcome" + getUserInfo);
+  
+   var GetUserInfo = document.getElementById("GetUserInfo");
+    var GetUserName = document.getElementById("userLogin");
+    var GetUserPassword = document.getElementById("userPassword");
+    var CheckUserName = function () {
+        if (GetUserName.value === "VidaliaPearlArmstrong")
+        {
+            if (GetUserPassword.value === "computergirl")
+            {
+                alert("Welcome " + GetUserName.value);
+            }
+            else
+            {
+                alert("Invalid Password");
+            }
         }
         else {
-            alert("Invalid UserName or Password");
-        }}
-    getUserInfo.addEventListener("submit", CheckUserName, false);
-    alert("UserName: " + @Model.UserName + " Password: " + @Model.PassWord);
+            alert("Invalid UserName");
+        }
+        alert(GetUserName.value + " Is your name");
+    }
+
+    GetUserInfo.addEventListener("submit", CheckUserName, false);
+
+   
 </script>
 
