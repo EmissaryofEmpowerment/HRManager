@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using HRManager.Models.ViewModels;
 using HRManager.Models;
 using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
-using HRManager.Models.ViewModels;
 
 namespace HRManager.Controllers
 {
@@ -75,13 +75,11 @@ namespace HRManager.Controllers
                 LastName = "Armstrong",
                 FavoriteColor = "red",
             };
+            EmployeeViewModel EmpList = new EmployeeViewModel();
             List<Employee> pointer = new List<Employee>()
             { _2ndEmployee, employee, Lots_of_Cheese, _3rd_employee, _4th_employee };
-            HRManager.Models.ViewModels.List_Employee_ViewModel
-                tester_view_model = new List_Employee_ViewModel();
-            tester_view_model.Employee_List = pointer;
-
-              return View(tester_view_model);
+            EmpList.Employee_List = pointer;
+              return View(EmpList);
         }
         public IActionResult IndividualTeamMember()
         {

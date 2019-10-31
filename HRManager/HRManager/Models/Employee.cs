@@ -9,7 +9,7 @@ namespace HRManager.Models
     {
         public Employee()
         {
-            
+           
         }
         public int EmployeeId { get; set; }
         public string FirstName { get; set; }
@@ -29,6 +29,7 @@ namespace HRManager.Models
         public HRManager.Models.Constants.PermissionLevel PermissionLevel { get; set; }
         public string UserName { get; set; }
         public string PassWord { get; set; }
+        public List<Employee> Employee_List { get; set; }
     }
 }
 

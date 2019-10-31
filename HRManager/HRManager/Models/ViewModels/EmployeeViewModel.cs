@@ -5,8 +5,8 @@ using System.Threading.Tasks;
 
 namespace HRManager.Models.ViewModels
 {
-    public class List_Employee_ViewModel
+    public class EmployeeViewModel
     {
-        public List<Employee> Employee_List;
+       public List<HRManager.Models.Employee> Employee_List { get; set; }
     }
 }

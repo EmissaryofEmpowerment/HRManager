@@ -28,8 +28,6 @@ namespace HRManager
         {
          
             services.AddMvc();
-            services.AddDbContext<HRManager.Data.EmployeeContextDB>(rrrrrr =>
-          rrrrrr.UseSqlServer(Configuration.GetConnectionString("DevConnection")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -55,6 +53,7 @@ namespace HRManager
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");
             });
+
         }
     }
 }
