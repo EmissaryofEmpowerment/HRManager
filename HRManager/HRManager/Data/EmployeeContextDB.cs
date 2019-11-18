@@ -13,5 +13,8 @@ namespace HRManager.Data
         {
 
         }
+
+        public DbSet<HRManager.Models.Employee>
+            Employees { get; set; }
     }
 }

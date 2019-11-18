@@ -29,32 +29,32 @@
         </thead>
         <tbody>
             @Model.
-                @for (int i = 0; i < Model.Employee_List.Count; i++)
-                {
-            <tr>
-                
-                <td>   @Model.Employee_List[i].FirstName</td>
-                <td>@Model.Employee_List[i].LastName</td>
-                <td>@Model.Employee_List[i].Address</td>
-                <td>@Model.Employee_List[i].Email</td>
-                <td>@Model.Employee_List[i].PhoneNumber</td>
-                <td>@Model.Employee_List[i].Position</td>
-                <td>@Model.Employee_List[i].Department</td>
-                <td>@Model.Employee_List[i].StartDate</td>
-                <td>@Model.Employee_List[i].EndDate</td>
-                <td>@Model.Employee_List[i].EmploymentStatus</td>
-                <td>@Model.Employee_List[i].Shift</td>
-                <td>@Model.Employee_List[i].Manager</td>
-                <td>@Model.Employee_List[i].FavoriteColor</td>
-                <td>@Model.Employee_List[i].PermissionLevel</td>
-                @*I need a way to make sure that the only
+            @for (int i = 0; i < Model.Employee_List.Count; i++)
+            {
+                    <tr>
+                        <td>   @Model.Employee_List[i].FirstName</td>
+                        <td>@Model.Employee_List[i].LastName</td>
+                        <td>@Model.Employee_List[i].Address</td>
+                        <td>@Model.Employee_List[i].Email</td>
+                        <td>@Model.Employee_List[i].PhoneNumber</td>
+                        <td>@Model.Employee_List[i].Position</td>
+                        <td>@Model.Employee_List[i].Department</td>
+                        <td>@Model.Employee_List[i].StartDate</td>
+                        <td>@Model.Employee_List[i].EndDate</td>
+                        <td>@Model.Employee_List[i].EmploymentStatus</td>
+                        <td>@Model.Employee_List[i].Shift</td>
+                        <td>@Model.Employee_List[i].Manager</td>
+                        <td>@Model.Employee_List[i].FavoriteColor</td>
+                        <td>@Model.Employee_List[i].PermissionLevel</td>
+                        @*I need a way to make sure that the only
                     users that can see the Employee's UserName
                     and Password is that individual Employee
                     plus people who have a high enough permisson level*@
-                <td>@Model.Employee_List[i].UserName</td>
-                <td>@Model.Employee_List[i].PassWord</td>
-            </tr>
-                }
+                        <td>@Model.Employee_List[i].UserName</td>
+                        <td>@Model.Employee_List[i].PassWord</td>
+
+                    </tr>
+            }
         </tbody>
         @*Here I want code that enumerates through all the instances
             Employee. Maybe this will have to wait until

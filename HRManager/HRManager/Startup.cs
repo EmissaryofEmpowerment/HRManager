@@ -24,10 +24,14 @@ namespace HRManager
         public IConfiguration Configuration { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
+
         public void ConfigureServices(IServiceCollection services)
         {
          
             services.AddMvc();
+
+            services.AddDbContext<HRManager.Data.EmployeeContextDB>(options =>
+            options.UseSqlServer(Configuration.GetConnectionString("DevConnection")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
