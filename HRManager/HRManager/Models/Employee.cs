@@ -2,6 +2,13 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.SqlServer;
+using Microsoft.EntityFrameworkCore.ValueGeneration;
+using AspNetCore;
+using System.ComponentModel;
+using System.ComponentModel.DataAnnotations.Schema;
+using System.ComponentModel.DataAnnotations;
 
 namespace HRManager.Models
 {
@@ -11,7 +18,10 @@ namespace HRManager.Models
         {
            
         }
+        [Key]
         public int EmployeeId { get; set; }
+        [Required(ErrorMessage ="This field is required")]
+        [DisplayName("Employee Number")]
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string Address { get; set; }
