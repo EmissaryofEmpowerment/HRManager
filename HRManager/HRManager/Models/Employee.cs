@@ -23,6 +23,7 @@ namespace HRManager.Models
         [Required(ErrorMessage ="This field is required")]
         [DisplayName("Employee Number")]
         public string FirstName { get; set; }
+        [Required]
         public string LastName { get; set; }
         public string Address { get; set; }
         public string Email { get; set; }

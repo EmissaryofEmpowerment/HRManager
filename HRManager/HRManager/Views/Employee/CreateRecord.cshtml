@@ -6,11 +6,10 @@
 
 <h2>Add New Employee</h2>
 <form id="create">
-    <fieldset>Please fill in the following inforation:</fieldset>
+    <fieldset>Please fill in the following information:</fieldset>
     <table>
         <thead>
             <tr>
-                <th>Employee ID</th>
                 <th>First Name</th>
                 <th>Last Name</th>
                 <th>Address</th>
@@ -47,16 +46,15 @@
                 <th><input /></th>
                 <th><input /></th>
                 <th><input /></th>
-                <th><input /></th>
             </tr>
         </tbody>
     </table>
     <button type="submit">Create</button>
     <a asp-area="" asp-controller="Employee" asp-action="AllEmployees">Back to List</a>
 </form>
-@*section Scripts {
-    (await Html.RenderPartialAsync("_ValidationScriptsPartial.cshtml");)
-}*@
+@section Scripts {
+    @(await Html.RenderPartialAsync("_ValidationScriptsPartial");)
+}
 <script>
     var create = document.getElementById("create");
     create.addEventListener("submit", submitcreate, false)
