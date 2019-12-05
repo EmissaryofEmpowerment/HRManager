@@ -53,7 +53,7 @@
     <a asp-area="" asp-controller="Employee" asp-action="AllEmployees">Back to List</a>
 </form>
 @section Scripts {
-    @(await Html.RenderPartialAsync("_ValidationScriptsPartial");)
+    (await Html.RenderPartialAsync("_ValidationScriptsPartial");)
 }
 <script>
     var create = document.getElementById("create");

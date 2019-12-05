@@ -29,9 +29,25 @@ namespace HRManager.Controllers
             Employee individual = new Employee();
             return View(individual);
         }
+        
         public IActionResult CreateRecord(int id = 0)
         {
             return View(new Employee());
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> CreateRecord
+            ([Bind("EmployeeID, FirstName, LastName")]
+            HRManager.Models.Employee employee)
+        {
+            if (ModelState.IsValid)
+            {
+                _contextDB.Add(employee);
+                await _contextDB.SaveChangesAsync();
+                return RedirectToAction(nameof(employee));
+            }
+            return View();
         }
     }
 }
