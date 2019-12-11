@@ -33,9 +33,9 @@
     var GetUserName = document.getElementById("userLogin");
     var GetUserPassword = document.getElementById("userPassword");
     var CheckUserName = function () {
-        if (GetUserName.value === "VidaliaPearlArmstrong")
+        if (GetUserName.value != null)
         {
-            if (GetUserPassword.value === "computergirl")
+            if (GetUserPassword.value != null)
             {
                 alert("Welcome " + GetUserName.value);
             }
@@ -47,7 +47,6 @@
         else {
             alert("Invalid UserName");
         }
-        alert(GetUserName.value + " Is your name");
     }
 
     GetUserInfo.addEventListener("submit", CheckUserName, false);
