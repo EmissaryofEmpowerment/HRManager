@@ -32,25 +32,25 @@
         </thead>
         <tbody>
             <tr>
-
-                <td>   @Model.FirstName</td>
-                <td>@Model.LastName</td>
-                <td>@Model.Address</td>
-                <td>@Model.Email</td>
-                <td>@Model.PhoneNumber</td>
-                <td>@Model.Position</td>
-                <td>@Model.Department</td>
-                <td>@Model.StartDate</td>
-                <td>@Model.EndDate</td>
-                <td>@Model.EmploymentStatus</td>
-                <td>@Model.Shift</td>
-                <td>@Model.Manager</td>
-                <td>@Model.FavoriteColor</td>
-                <td>@Model.PermissionLevel</td>
+                <td style="text-align:center">@Model.EmployeeId</td>
+                <td style="text-align:center">@Model.FirstName</td>
+                <td style="text-align:center">@Model.LastName</td>
+                <td style="text-align:center">@Model.Address</td>
+                <td style="text-align:center">@Model.Email</td>
+                <td style="text-align:center">@Model.PhoneNumber</td>
+                <td style="text-align:center">@Model.Position</td>
+                <td style="text-align:center">@Model.Department</td>
+                <td style="text-align:center">@Model.StartDate</td>
+                <td style="text-align:center">@Model.EndDate</td>
+                <td style="text-align:center">@Model.EmploymentStatus</td>
+                <td style="text-align:center">@Model.Shift</td>
+                <td style="text-align:center">@Model.Manager</td>
+                <td style="text-align:center">@Model.FavoriteColor</td>
+                <td style="text-align:center">@Model.PermissionLevel</td>
                 @*I need a way to make sure that the only
-                    users that can see the Employee's UserName
-                    and Password is that individual Employee
-                    plus people who have a high enough permisson level*@
+        users that can see the Employee's UserName
+        and Password is that individual Employee
+        plus people who have a high enough permisson level*@
                 <td>@Model.UserName</td>
                 <td>@Model.PassWord</td>
             </tr>

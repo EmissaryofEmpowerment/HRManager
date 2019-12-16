@@ -17,8 +17,8 @@ namespace HRManager.Models
 
         public enum Employment_Status
         {
-Owner, Hired, Suspended, Terminated, Partner
-}
+            Owner, Hired, Suspended, Terminated, Partner
+        }
         public enum Shift
         {
             Day, Night, Graveyard

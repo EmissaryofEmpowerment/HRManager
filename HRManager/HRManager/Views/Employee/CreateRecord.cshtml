@@ -53,9 +53,9 @@
     <button type="submit">Create</button>
     <a asp-area="" asp-controller="Employee" asp-action="AllEmployees">Back to List</a>
 </form>
-@section Scripts {
+@*@section Scripts {
     (await Html.RenderPartialAsync("_ValidationScriptsPartial");)
-}
+}*@
 <script>
     var create = document.getElementById("create");
     create.addEventListener("submit", submitcreate, false)
